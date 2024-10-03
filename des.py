@@ -6,7 +6,7 @@ import time
 
 start_time = time.time()
 
-async def theme() -> None:
+async def gui_theme() -> None:
     while True:
         console_clear()
         elapsed_time = time.time() - start_time
