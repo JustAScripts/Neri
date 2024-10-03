@@ -16,7 +16,7 @@ last_detected = None
 from datetime import datetime
 from ping3 import ping
 from colorama import Fore, Style
-from des  import theme
+from des  import gui_theme
 
 with open('config.json', 'r') as files:
     config = json.load(files)
@@ -182,7 +182,7 @@ async def buy_item() -> None:
 async def main() -> None:
     global bar, last_detected
     bar = None
-    asyncio.create_task(theme())
+    asyncio.create_task(gui_theme())
     async with aiohttp.ClientSession() as session:
         while True:
             try:
