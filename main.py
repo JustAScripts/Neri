@@ -1,4 +1,3 @@
-
 import aiohttp
 import asyncio
 import json
@@ -17,7 +16,7 @@ last_detected = None
 from datetime import datetime
 from ping3 import ping
 from colorama import Fore, Style
-from theme import themes
+from des import design_theme
 
 with open('config.json', 'r') as files:
     config = json.load(files)
@@ -183,7 +182,7 @@ async def buy_item() -> None:
 async def main() -> None:
     global bar, last_detected
     bar = None
-    asyncio.create_task(themes())
+    asyncio.create_task(design_theme())
     async with aiohttp.ClientSession() as session:
         while True:
             try:
