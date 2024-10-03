@@ -1,4 +1,4 @@
-from nerium import console_clear, latency, task, last_bought, last_detected, error_count, succes_count
+from main import console_clear, latency, task, last_bought, last_detected, error_count, succes_count
 import asyncio
 from colorama import Fore, Style
 import os
@@ -6,7 +6,7 @@ import time
 
 start_time = time.time()
 
-async def themes() -> None:
+async def design_theme() -> None:
     while True:
         console_clear()
         elapsed_time = time.time() - start_time
